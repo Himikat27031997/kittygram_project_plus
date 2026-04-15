@@ -1,5 +1,15 @@
 from django.db import models
 
+
+CHOICES = (
+        ('Gray', 'Серый'),
+        ('Black', 'Чёрный'),
+        ('White', 'Белый'),
+        ('Ginger', 'Рыжий'),
+        ('Mixed', 'Смешанный'),
+    )
+
+
 class Achievement(models.Model):
     name = models.CharField(max_length=64)
 
@@ -12,6 +22,7 @@ class Owner(models.Model):
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
+
 
 class Cat(models.Model):
     name = models.CharField(max_length=16)
